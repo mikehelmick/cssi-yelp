@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>App Engine Yelp API Call Example</title>
+  </head>
+  <body>
+    <p><b>Source code is at <a href="https://github.com/mikehelmick/cssi-yelp">https://github.com/mikehelmick/cssi-yelp</a></b></p>
+    <form method="get" action="/">
+      <p><input type="text" name="q"
+             value="{{q}}" />
+         <input type="submit" value="Search" /> |
+         <a href="/recent">Recent Searches</a> |
+         <a href="/popular">Popular Searches</a>
+      </p>
+    </form>
+
+    <code>
+    {{content}}
+    </code>
+  </body>
+</html>

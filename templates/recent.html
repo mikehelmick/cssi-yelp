@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p><a href="/">Home</a> | <b>Recent Searches</b> |
+       <a href="/popular">Popular Searches</a></p>
+    <hr/>
+
+    {% if searches|length == 0 %}
+      <p><b>No recent searches</b></p>
+    {% else %}
+      <ul>
+      {% for user_search in searches %}
+        <li><b><a href="/?{{user_search.encode_term()}}">{{user_search.term}}</a></b> |
+            Last Search Time: {{user_search.updated_at}}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
+</html>
